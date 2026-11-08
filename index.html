@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAFÉ MORI | 森のなかの珈琲店</title>
+  <meta name="description" content="CAFÉ MORI は、森の静けさをそのまま閉じ込めたような小さな珈琲店です。自家焙煎のスペシャルティコーヒーと季節の焼き菓子をどうぞ。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Zen+Old+Mincho:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#home" class="logo" aria-label="CAFÉ MORI トップへ">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 3 L25 17 H20 L27 27 H5 L12 17 H7 Z" fill="currentColor"/>
+          <rect x="14.5" y="27" width="3" height="3" fill="currentColor"/>
+        </svg>
+        <span class="logo__text">CAFÉ MORI</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="メインナビゲーション">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link is-active">Home</a></li>
+          <li><a href="#concept" class="nav__link">Concept</a></li>
+          <li><a href="#menu" class="nav__link">Menu</a></li>
+          <li><a href="#access" class="nav__link">Access</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__light"></div>
+        <svg class="hero__trees" viewBox="0 0 1440 400" preserveAspectRatio="none">
+          <path class="tree-layer tree-layer--back" d="M0 400 V260 L40 200 L80 250 L130 160 L180 240 L230 180 L280 250 L340 140 L400 230 L450 190 L510 250 L570 150 L630 240 L690 170 L750 250 L810 130 L870 230 L930 180 L990 250 L1050 150 L1110 240 L1170 190 L1230 250 L1290 160 L1350 230 L1400 190 L1440 230 V400 Z"/>
+          <path class="tree-layer tree-layer--front" d="M0 400 V320 L60 250 L110 310 L170 220 L230 300 L290 260 L350 320 L420 230 L490 310 L550 270 L610 330 L680 240 L750 320 L820 270 L880 330 L950 220 L1020 310 L1080 260 L1140 320 L1210 240 L1280 310 L1340 270 L1400 320 L1440 280 V400 Z"/>
+        </svg>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow">Specialty Coffee &amp; Bake</p>
+        <h1 class="hero__title">
+          <span class="hero__title-line">森の静けさを、</span>
+          <span class="hero__title-line">一杯に。</span>
+        </h1>
+        <p class="hero__lead">
+          木漏れ日のさすカウンターで、自家焙煎の珈琲と<br class="pc-only">
+          季節の焼き菓子をゆっくりとお楽しみください。
+        </p>
+        <div class="hero__actions">
+          <a href="#menu" class="btn btn--primary">メニューを見る</a>
+          <a href="#access" class="btn btn--ghost">アクセス</a>
+        </div>
+      </div>
+
+      <a href="#concept" class="hero__scroll" aria-label="下へスクロール">
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ===== Concept ===== -->
+    <section class="section concept" id="concept">
+      <div class="container concept__inner">
+        <div class="concept__visual reveal" aria-hidden="true">
+          <div class="cup">
+            <div class="cup__steam"><i></i><i></i><i></i></div>
+            <div class="cup__body"><div class="cup__coffee"></div></div>
+            <div class="cup__handle"></div>
+            <div class="cup__saucer"></div>
+          </div>
+        </div>
+        <div class="concept__text reveal">
+          <p class="section__eyebrow">Concept</p>
+          <h2 class="section__title">ゆっくり流れる、<br>森の時間。</h2>
+          <p>
+            CAFÉ MORI は、街のはずれの小さな雑木林のそばに佇む珈琲店です。
+            豆は毎朝店内で少量ずつ焙煎し、一杯ずつハンドドリップで丁寧に淹れています。
+          </p>
+          <p>
+            忙しい日々のなかで、ふと深呼吸したくなったとき。
+            木の香りと珈琲の香りに包まれて、自分だけの時間を過ごしてください。
+          </p>
+          <ul class="concept__features">
+            <li><strong>01</strong><span>毎朝の自家焙煎</span></li>
+            <li><strong>02</strong><span>一杯ずつハンドドリップ</span></li>
+            <li><strong>03</strong><span>季節の手づくり焼き菓子</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Menu ===== -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Menu</p>
+          <h2 class="section__title">メニュー</h2>
+        </div>
+
+        <div class="menu__tabs reveal" role="tablist" aria-label="メニューカテゴリ">
+          <button class="menu__tab is-active" role="tab" aria-selected="true" aria-controls="panel-coffee" id="tab-coffee" data-target="panel-coffee">Coffee</button>
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-drink" id="tab-drink" data-target="panel-drink" tabindex="-1">Drink</button>
+          <button class="menu__tab" role="tab" aria-selected="false" aria-controls="panel-sweets" id="tab-sweets" data-target="panel-sweets" tabindex="-1">Sweets</button>
+        </div>
+
+        <!-- Coffee -->
+        <div class="menu__panel is-active" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee">
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--dark" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>森のブレンド</h3><span class="price">¥580</span>
+              </div>
+              <p>当店の看板。深煎りのコクと、ほのかなカカオの余韻。</p>
+              <span class="tag">Signature</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--medium" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>エチオピア イルガチェフェ</h3><span class="price">¥680</span>
+              </div>
+              <p>ジャスミンのような華やかな香りと、柑橘系の明るい酸味。</p>
+              <span class="tag">Light Roast</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--latte" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>カフェラテ</h3><span class="price">¥620</span>
+              </div>
+              <p>エスプレッソに、きめ細やかにスチームしたミルクを合わせて。</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--dark" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>水出しアイスコーヒー</h3><span class="price">¥600</span>
+              </div>
+              <p>12時間かけてじっくり抽出。すっきりとまろやかな味わい。</p>
+              <span class="tag">Iced</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Drink -->
+        <div class="menu__panel" id="panel-drink" role="tabpanel" aria-labelledby="tab-drink" hidden>
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--green" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>抹茶ラテ</h3><span class="price">¥650</span>
+              </div>
+              <p>京都・宇治の石臼挽き抹茶を使用。甘さ控えめで仕上げています。</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--amber" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>ほうじ茶ラテ</h3><span class="price">¥620</span>
+              </div>
+              <p>香ばしい焙じ茶とミルクの、ほっとするやさしい一杯。</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--berry" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>森の果実ソーダ</h3><span class="price">¥680</span>
+              </div>
+              <p>自家製ベリーシロップを炭酸で割った、季節限定のドリンク。</p>
+              <span class="tag">Seasonal</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--amber" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>はちみつジンジャー</h3><span class="price">¥600</span>
+              </div>
+              <p>国産生姜とはちみつで、からだの内側からぽかぽかに。</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Sweets -->
+        <div class="menu__panel" id="panel-sweets" role="tabpanel" aria-labelledby="tab-sweets" hidden>
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--amber" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>森のバスクチーズケーキ</h3><span class="price">¥560</span>
+              </div>
+              <p>香ばしい焼き目と、とろけるような中心部のコントラスト。</p>
+              <span class="tag">Popular</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--berry" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>季節のフルーツタルト</h3><span class="price">¥620</span>
+              </div>
+              <p>その時期いちばんおいしい果物を、さくさくのタルトにのせて。</p>
+              <span class="tag">Seasonal</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--medium" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>どんぐりスコーン</h3><span class="price">¥380</span>
+              </div>
+              <p>外はさっくり、中はほろり。クロテッドクリームとジャムを添えて。</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__icon menu-card__icon--dark" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__head">
+                <h3>ガトーショコラ</h3><span class="price">¥540</span>
+              </div>
+              <p>カカオ70%のチョコレートを使った、濃厚でしっとりした一皿。</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="menu__note reveal">※ 価格はすべて税込です。テイクアウトも承ります。</p>
+      </div>
+    </section>
+
+    <!-- ===== Access ===== -->
+    <section class="section access" id="access">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Access</p>
+          <h2 class="section__title">アクセス</h2>
+        </div>
+
+        <div class="access__grid">
+          <div class="access__map reveal" aria-label="店舗周辺の地図（イメージ）" role="img">
+            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="300" class="map-bg"/>
+              <path d="M0 210 Q120 190 200 200 T400 180" class="map-road map-road--main"/>
+              <path d="M150 0 L170 300" class="map-road"/>
+              <path d="M0 80 L400 110" class="map-road"/>
+              <path d="M300 0 Q280 150 320 300" class="map-river"/>
+              <g class="map-forest">
+                <circle cx="230" cy="140" r="16"/><circle cx="252" cy="128" r="14"/>
+                <circle cx="248" cy="156" r="13"/><circle cx="270" cy="146" r="11"/>
+                <circle cx="60" cy="40" r="12"/><circle cx="80" cy="30" r="10"/>
+              </g>
+              <rect x="40" y="225" width="70" height="26" rx="4" class="map-station"/>
+              <text x="75" y="242" class="map-label map-label--light">森ノ宮駅</text>
+              <g class="map-pin">
+                <path d="M200 150 c-14 0 -24 10 -24 23 c0 18 24 39 24 39 s24 -21 24 -39 c0 -13 -10 -23 -24 -23z"/>
+                <circle cx="200" cy="173" r="8" class="map-pin__dot"/>
+              </g>
+              <text x="200" y="135" class="map-label">CAFÉ MORI</text>
+            </svg>
+          </div>
+
+          <div class="access__info reveal">
+            <dl class="info-list">
+              <div class="info-list__row">
+                <dt>Address</dt>
+                <dd>〒000-0000<br>東京都森野区こもれび町 1-2-3</dd>
+              </div>
+              <div class="info-list__row">
+                <dt>Station</dt>
+                <dd>森ノ宮駅 北口より徒歩 5 分</dd>
+              </div>
+              <div class="info-list__row">
+                <dt>Open</dt>
+                <dd>8:00 – 19:00（L.O. 18:30）<br>土日祝 9:00 – 20:00</dd>
+              </div>
+              <div class="info-list__row">
+                <dt>Closed</dt>
+                <dd>毎週水曜日</dd>
+              </div>
+              <div class="info-list__row">
+                <dt>Tel</dt>
+                <dd>00-0000-0000</dd>
+              </div>
+            </dl>
+            <p class="access__status" id="openStatus" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#home" class="logo logo--footer">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 3 L25 17 H20 L27 27 H5 L12 17 H7 Z" fill="currentColor"/>
+          <rect x="14.5" y="27" width="3" height="3" fill="currentColor"/>
+        </svg>
+        <span class="logo__text">CAFÉ MORI</span>
+      </a>
+      <p class="footer__copy">&copy; <span id="year"></span> CAFÉ MORI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="#home" class="to-top" id="toTop" aria-label="ページの先頭へ戻る">↑</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
