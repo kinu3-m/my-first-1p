@@ -136,6 +136,50 @@ document.addEventListener("DOMContentLoaded", () => {
   updateStatus();
   setInterval(updateStatus, 60 * 1000);
 
+  /* ---------- Contact form ---------- */
+  const contactForm = document.getElementById("contactForm");
+  const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const fieldRules = [
+    { input: contactForm.elements.name, label: "お名前" },
+    { input: contactForm.elements.email, label: "メールアドレス", isEmail: true },
+    { input: contactForm.elements.message, label: "お問い合わせ内容" },
+  ];
+
+  const validateField = ({ input, label, isEmail }) => {
+    const value = input.value.trim();
+    let message = "";
+    if (!value) message = `${label}を入力してください`;
+    else if (isEmail && !EMAIL_PATTERN.test(value)) message = "メールアドレスの形式が正しくありません";
+
+    const errorEl = document.getElementById(input.getAttribute("aria-describedby"));
+    errorEl.textContent = message;
+    input.setAttribute("aria-invalid", String(Boolean(message)));
+    return !message;
+  };
+
+  // Re-validate as the user types, but only once a field has shown an error
+  fieldRules.forEach((rule) => {
+    rule.input.addEventListener("input", () => {
+      if (rule.input.getAttribute("aria-invalid") === "true") validateField(rule);
+    });
+  });
+
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const results = fieldRules.map(validateField);
+    const firstInvalid = fieldRules.find((_, i) => !results[i]);
+
+    if (firstInvalid) {
+      firstInvalid.input.focus();
+      return;
+    }
+
+    alert("送信しました");
+    contactForm.reset();
+    fieldRules.forEach(({ input }) => input.removeAttribute("aria-invalid"));
+  });
+
   /* ---------- Footer year ---------- */
   document.getElementById("year").textContent = new Date().getFullYear();
 });
