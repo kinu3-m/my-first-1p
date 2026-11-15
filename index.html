@@ -29,6 +29,7 @@
           <li><a href="#concept" class="nav__link">Concept</a></li>
           <li><a href="#menu" class="nav__link">Menu</a></li>
           <li><a href="#access" class="nav__link">Access</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
 
@@ -302,6 +303,41 @@
             <p class="access__status" id="openStatus" aria-live="polite"></p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Contact</p>
+          <h2 class="section__title">お問い合わせ</h2>
+          <p class="contact__lead">貸切のご相談や豆のご購入など、お気軽にご連絡ください。</p>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-field">
+            <label for="contactName" class="form-field__label">お名前<span class="form-field__required">必須</span></label>
+            <input type="text" id="contactName" name="name" class="form-field__input" autocomplete="name" placeholder="森 太郎" aria-describedby="contactNameError">
+            <p class="form-field__error" id="contactNameError" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="contactEmail" class="form-field__label">メールアドレス<span class="form-field__required">必須</span></label>
+            <input type="email" id="contactEmail" name="email" class="form-field__input" autocomplete="email" inputmode="email" placeholder="mori@example.com" aria-describedby="contactEmailError">
+            <p class="form-field__error" id="contactEmailError" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="contactMessage" class="form-field__label">お問い合わせ内容<span class="form-field__required">必須</span></label>
+            <textarea id="contactMessage" name="message" class="form-field__input form-field__input--textarea" rows="6" placeholder="ご用件をご記入ください" aria-describedby="contactMessageError"></textarea>
+            <p class="form-field__error" id="contactMessageError" aria-live="polite"></p>
+          </div>
+
+          <div class="contact-form__actions">
+            <button type="submit" class="btn btn--forest">送信する</button>
+          </div>
+        </form>
       </div>
     </section>
   </main>

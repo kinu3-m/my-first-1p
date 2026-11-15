@@ -210,6 +210,13 @@ button { font: inherit; cursor: pointer; }
   background: rgba(246, 241, 231, .1);
 }
 
+.btn--forest {
+  border: 0;
+  background: var(--forest-700);
+  color: var(--cream);
+}
+.btn--forest:hover { background: var(--forest-500); }
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -748,6 +755,88 @@ button { font: inherit; cursor: pointer; }
 @media (max-width: 767px) {
   .access__grid { grid-template-columns: 1fr; }
   .info-list__row { grid-template-columns: 80px 1fr; }
+}
+
+/* ---------- Contact ---------- */
+.contact { background: var(--cream); }
+
+.contact__lead {
+  margin-top: 16px;
+  font-size: .95rem;
+  color: var(--text-sub);
+}
+
+.contact-form {
+  max-width: 680px;
+  margin-inline: auto;
+  padding: clamp(28px, 5vw, 48px);
+  background: var(--paper);
+  border-radius: 20px;
+  box-shadow: 0 24px 50px -32px rgba(36, 53, 43, .45);
+}
+
+.form-field + .form-field { margin-top: 24px; }
+
+.form-field__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mincho);
+  font-weight: 700;
+  color: var(--forest-800);
+  margin-bottom: 8px;
+}
+
+.form-field__required {
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(192, 138, 82, .15);
+  color: var(--caramel);
+  font-family: var(--font-body);
+  font-size: .72rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.form-field__input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--sand);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+  letter-spacing: .04em;
+  transition: border-color .3s, box-shadow .3s;
+}
+.form-field__input::placeholder { color: #b5a99a; }
+.form-field__input:focus {
+  outline: none;
+  border-color: var(--forest-500);
+  box-shadow: 0 0 0 4px rgba(91, 122, 99, .15);
+}
+.form-field__input--textarea {
+  resize: vertical;
+  min-height: 160px;
+  line-height: 1.8;
+}
+
+.form-field__input[aria-invalid="true"] {
+  border-color: #b5524a;
+  box-shadow: 0 0 0 4px rgba(181, 82, 74, .12);
+}
+
+.form-field__error {
+  margin-top: 6px;
+  font-size: .85rem;
+  color: #b5524a;
+}
+.form-field__error:empty { display: none; }
+
+.contact-form__actions {
+  margin-top: 36px;
+  text-align: center;
 }
 
 /* ---------- Footer ---------- */
